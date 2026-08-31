@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light dark;
+  --ground: #f2f2f7;
+  --surface: #ffffff;
+  --text: #1c1c1e;
+  --text-secondary: #6e6e73;
+  --accent: #ff9500;
+  --rule: #e5e5ea;
+  --measure: 40rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #000000;
+    --surface: #1c1c1e;
+    --text: #f2f2f7;
+    --text-secondary: #98989d;
+    --accent: #ff9f0a;
+    --rule: #3a3a3c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+}
+
+header,
+main,
+footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+header {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand svg {
+  width: 44px;
+  height: 44px;
+  flex: none;
+}
+
+.brand strong {
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+}
+
+nav {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+main {
+  padding-bottom: 3rem;
+}
+
+article {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  margin-top: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  margin: 1.75rem 0 0.5rem;
+}
+
+p,
+li {
+  margin: 0.5rem 0;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+.meta {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 1.5rem 0;
+}
+
+footer {
+  padding-bottom: 3rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
